@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "nodemon",
-    "build": "esbuild src/index.ts  --bundle --minify --platform=node  --external:fsevents --log-level=error --outdir=dist"
+    "build": "node esbuild.config.js"
   },
   "devDependencies": {
     "@types/node": "^20.9.4",
