@@ -1,0 +1,29 @@
+{
+  "name": "esbuild-practice",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "bin": "dist/index.js",
+  "files": [
+    "dist/index.js"
+  ],
+  "engines": {
+    "node": ">=18.16.0"
+  },
+  "scripts": {
+    "start": "nodemon",
+    "build": "esbuild src/index.ts  --bundle --minify --platform=node  --external:fsevents --log-level=error --outdir=dist"
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.4",
+    "esbuild-node-tsc": "^2.0.5",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "esbuild": "^0.19.7",
+    "ethers": "5.7.0",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.2"
+  }
+}
