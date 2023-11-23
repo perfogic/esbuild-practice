@@ -2,7 +2,7 @@ const esbuild = require("esbuild");
 
 esbuild
   .build({
-    entryPoints: ["src/index.ts", "src/workers/count.ts"],
+    entryPoints: ["src/index.ts", "src/workers/*.ts"],
     bundle: true,
     outdir: "dist",
     format: "cjs",
