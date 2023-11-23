@@ -2,10 +2,10 @@ const esbuild = require("esbuild");
 
 esbuild
   .build({
-    entryPoints: ["src/index.ts"],
+    entryPoints: ["src/index.ts", "src/workers/count.ts"],
     bundle: true,
     outdir: "dist",
-    format: "esm",
+    format: "cjs",
     platform: "node",
     define: {},
     loader: { ".ts": "ts" },
